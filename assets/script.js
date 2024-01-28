@@ -1,5 +1,5 @@
-/* --------------------------------------------------------------------------------- */
-// Images du carrousel
+
+//Images du carrousel
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -20,7 +20,7 @@ const slides = [
 ]
 
 /* ------------------------------------------------------------------------------------------ */
-// Récupération des éléments pour l'intéraction
+// éléments pour l'intéraction
 let buttonPrevious = document.querySelector(".arrow_left") ;
 let buttonNext = document.querySelector(".arrow_right") ;
 let dots = document.querySelector(".dots") ;
@@ -28,7 +28,7 @@ let bannerParagraphe = document.querySelector("#banner p");
 let bannerImage = document.querySelector('#banner .banner-img');
 
 
-// Création des bullets points
+// points
 for(let i = 0; i < slides.length; i++) {
 	let span = document.createElement("span");
 	span.classList.add("dot");
@@ -36,7 +36,7 @@ for(let i = 0; i < slides.length; i++) {
 }
 
 
-// Etat initial - Premier dot sélectionné
+// Premier dot sélectionne
 let slideIndex = 0;
 
 let listeDotSpan = document.querySelectorAll(".dot");
@@ -56,7 +56,7 @@ buttonPrevious.addEventListener("click", () => {
 	// On change le bullet point actif au suivant	 
 	listeDotSpan[slideIndex].classList.add("dot_selected");
 
-	// Mise à jour de l'image et du texte du carrousel
+	// Mise à jour de l'image et du texte 
 	let slidesTextContent = slides[slideIndex].tagLine ;
 	
 	bannerParagraphe.innerHTML = slidesTextContent ;
